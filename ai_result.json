@@ -1,0 +1,44 @@
+{
+  "version": "4.5.13",
+  "flags": {},
+  "shapes": [
+    {
+      "elementId": "search_btn",
+      "label": "icon",
+      "points": [
+        [
+          1017,
+          117
+        ],
+        [
+          1022,
+          254
+        ]
+      ],
+      "group_id": null,
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "elementId": "search_input",
+      "label": "input",
+      "points": [
+        [
+          667,
+          330
+        ],
+        [
+          1158,
+          369
+        ]
+      ],
+      "group_id": null,
+      "shape_type": "rectangle",
+      "flags": {}
+    }
+  ],
+  "imagePath": "4-2.jpg",
+  "imageData": null,
+  "imageHeight": 750,
+  "imageWidth": 1250
+}

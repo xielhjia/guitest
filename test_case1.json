@@ -1,0 +1,41 @@
+{
+	"pageId": "222222",
+	"pageName": "",
+	"actions": [
+			{
+				"element":  {
+					"type": "input",
+					"ID": "search_input",
+					"pageId": "11111",
+					"element_content": "home",
+					"icon": "11111",
+					"x": 1,
+					"y": 1,
+					"w": 1,
+					"h": 1
+				},
+				"action": "click",
+				"action_resource": "keyboard",
+				"action_resp": "route_next_page",
+				"expected_result":[]
+			},
+			{
+				"element":  {
+					"type": "button",
+					"ID": "search_btn",
+					"pageId": "11111",
+					"element_content": "search",
+					"icon": "11111",
+					"x": 1,
+					"y": 1,
+					"w": 1,
+					"h": 1
+				},
+				"action": "click",
+				"action_resource": "mouse",
+				"action_resp": "route_next_page",
+				"expected_result":[]
+			}
+		]
+}
+
