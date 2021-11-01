@@ -46,7 +46,7 @@ steps:
 - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
 
-- script: pip install -r guitest/requirements.txt
+- script: pip install -r requirements.txt
   displayName: 'Install requirements'
 
 
@@ -55,5 +55,5 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
-    scriptPath: 'guitest/operation_control.py'
-    workingDirectory: 'guitest/'
+    scriptPath: 'operation_control.py'
+    workingDirectory: './'
