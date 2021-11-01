@@ -48,7 +48,9 @@ def getScreenShot(pcname,x, y, w,h):
 
 #grab the active window shot by using win32gui lib
 def getActiveWindowShot(picname, w, h):
-    hwnd = win32gui.GetForegroundWindow()
+    hwnd = win32gui.GetActiveWindow()
+    # hwnd =  win32gui.GetDesktopWindow()
+    print('hwnd:', hwnd)
     r = win32gui.GetWindowRect(hwnd)
     bmpFileName = 'screenshot.bmp'
 
@@ -84,6 +86,8 @@ def _get_all_hwnd(hwnd, mouse):
 
 def __enum_all_wnd():
     win32gui.EnumWindows(_get_all_hwnd, 0)
+    print('1111111111111111111111')
+    print(hwnd_title.items())
     for wnd in hwnd_title.items():
         print(wnd)
 
@@ -92,6 +96,7 @@ def __enum_all_wnd():
 if __name__ == "__main__":
     time.sleep(5)
     pic_name_step1 = "pic_name_step1.jpg"
+    __enum_all_wnd()
     img = getActiveWindowShot(pic_name_step1, 0, 0)
 
     load_dict = {}
