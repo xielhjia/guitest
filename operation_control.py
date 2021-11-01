@@ -48,7 +48,7 @@ def getScreenShot(pcname,x, y, w,h):
 
 #grab the active window shot by using win32gui lib
 def getActiveWindowShot(picname, w, h):
-    hwnd = win32gui.GetActiveWindow()
+    hwnd = win32gui.GetForegroundWindow()
     # hwnd =  win32gui.GetDesktopWindow()
     print('hwnd:', hwnd)
     r = win32gui.GetWindowRect(hwnd)
