@@ -1,0 +1,59 @@
+# Node.js with Angular
+
+# Build a Node.js project that uses Angular.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  name: auto-test-win10
+
+strategy:
+  matrix:
+    Python37:
+      python.version: '3.7'
+
+
+
+
+steps:
+# - task: NodeTool@0
+#   inputs:
+#     versionSpec: '10.x'
+#   displayName: 'Install Node.js'
+
+# - script: |
+#     npm install -g @angular/cli
+#     npm install
+#     ng build --prod
+#   displayName: 'npm install and build'
+
+
+# - task: InstallPython@1
+#   inputs:
+#     version: 'python'
+#     outputdir: '$(Agent.ToolsDirectory)\python'
+#   displayName: 'python install1111 $(AGENT_TOOLSDIRECTORY)'
+    
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    # addToPath: true
+    architecture: 'x64'
+
+- script: python -m pip install --upgrade pip setuptools wheel
+  displayName: 'Install tools'
+
+- script: pip install -r guitest/requirements.txt
+  displayName: 'Install requirements'
+
+
+- task: agent-screenshot@1
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'filePath'
+    scriptPath: 'guitest/operation_control.py'
+    workingDirectory: 'guitest/'
