@@ -142,3 +142,5 @@ if __name__ == "__main__":
             pyautogui.moveTo(x=(action.element.x + action.element.w[0] /2 ), y=(action.element.y + action.element.h[0]/2), duration=1, tween=pyautogui.linear)
             click()
 
+    print('Job finished')
+
