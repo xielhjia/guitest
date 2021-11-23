@@ -86,7 +86,6 @@ def _get_all_hwnd(hwnd, mouse):
 
 def __enum_all_wnd():
     win32gui.EnumWindows(_get_all_hwnd, 0)
-    print('1111111111111111111111')
     print(hwnd_title.items())
     for wnd in hwnd_title.items():
         print(wnd)
@@ -142,7 +141,4 @@ if __name__ == "__main__":
             # 鼠标移动到element位置
             pyautogui.moveTo(x=(action.element.x + action.element.w[0] /2 ), y=(action.element.y + action.element.h[0]/2), duration=1, tween=pyautogui.linear)
             click()
-    ### ai result
 
-    # sleep(1)
-    # pic_name_step2 = '2.jpg'
