@@ -1,4 +1,4 @@
-pywin32=225
+pywin32
 pyautogui
 pillow
 numpy
