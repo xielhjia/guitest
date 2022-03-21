@@ -11,6 +11,12 @@ variables:
 
 
 steps:
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.7'
+    addToPath: true
+    architecture: 'x64'
 # - task: UsePythonVersion@0
 #   inputs:
 #     versionSpec: '3.x'
@@ -34,8 +40,7 @@ steps:
 
 - task: InstallPython@1
   inputs:
-    version: 'python'
-    prerelease: true
+    version: '$(PythonVersion)'
 - task: agent-screenshot@1
 
 - task: PythonScript@0
