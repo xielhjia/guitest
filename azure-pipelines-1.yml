@@ -11,11 +11,11 @@ variables:
 
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.x'
-    # addToPath: true
-    architecture: 'x64'
+# - task: UsePythonVersion@0
+#   inputs:
+#     versionSpec: '3.x'
+#     # addToPath: true
+#     architecture: 'x64'
 
 # - task: Cache@2
 #   inputs:
@@ -29,10 +29,13 @@ steps:
 #- script: python -m pip install --upgrade pip setuptools wheel
  # displayName: 'Install tools'
 
-- script: pip install -r requirements.txt
-  displayName: 'Install requirements'
+# - script: pip install -r requirements.txt
+#   displayName: 'Install requirements'
 
-
+- task: InstallPython@1
+  inputs:
+    version: 'python'
+    prerelease: true
 - task: agent-screenshot@1
 
 - task: PythonScript@0
