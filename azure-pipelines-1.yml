@@ -1,7 +1,6 @@
 
 trigger:
 - main
-
 pool:
   name: auto-test-win10
 
@@ -11,6 +10,14 @@ variables:
 
 
 steps:
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      D:\Program Files (x86)\python3.7.4\python.exe -V
+      D:\Program Files (x86)\python3.7.4\Scripts\pip.exe install
+
 
 - task: UsePythonVersion@0
   inputs:
