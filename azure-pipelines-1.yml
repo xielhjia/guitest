@@ -14,7 +14,8 @@ steps:
 
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.7.x'
+    versionSpec: '3.7.4'
+    addToPath: true
     architecture: 'x64'
 # - task: UsePythonVersion@0
 #   inputs:
@@ -37,9 +38,9 @@ steps:
 # - script: pip install -r requirements.txt
 #   displayName: 'Install requirements'
 
-- task: InstallPython@1
-  inputs:
-    version: '$(PythonVersion)'
+# - task: InstallPython@1
+#   inputs:
+#     version: '$(PythonVersion)'
 - task: agent-screenshot@1
 
 - task: PythonScript@0
